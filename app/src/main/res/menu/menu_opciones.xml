@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/listaDeportes"
+        android:icon="@drawable/ic_baseline_sports_24"
+        android:title="DEPORTES"
+
+        />
+
+    <item
+        android:id="@+id/perfilUsuario"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="PERFIL"
+        />
+    <item
+        android:id="@+id/salirAplicacion"
+        android:icon="@drawable/ic_baseline_exit_to_app_24"
+        android:title="SALIR"
+        />
+
+</menu>

@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="letra">#67BFE6</color>
+    <color name="boton">#52B8E4</color>
+    <color name="fondo3">#89F0CF</color>
+    <color name="fondo2">#8BCCE7</color>
+    <color name="fondo1">#75C9ED</color>
+    <color name="dorado">#E18701</color>
+    <color name="dorado1">#8A642A</color>
+
 </resources>

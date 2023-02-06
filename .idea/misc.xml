@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/drawable/bordes_constraint.xml" value="0.17" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/drawable/editredondo.xml" value="0.17" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/drawable/fondo_degradado.xml" value="0.17" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_apuesta.xml" value="0.25" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_basquet.xml" value="0.1" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_deportes.xml" value="0.264" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_futbol.xml" value="0.25" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_lista_partidos.xml" value="0.2076923076923077" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_otro.xml" value="0.2359375" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_partidos_basquet.xml" value="0.25416666666666665" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_partidos_futbol.xml" value="0.25416666666666665" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_partidos_otros.xml" value="0.25416666666666665" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_perfil.xml" value="0.1" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_registro_apuestas.xml" value="0.25416666666666665" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/layout/activity_resultado_lista.xml" value="0.253125" />
+        <entry key="..\:/Octavo Semestre/Dispositivos Moviles/proyectofinal/dispositivos_moviles_app_apuesta_ya/app/src/main/res/menu/menu_opciones.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

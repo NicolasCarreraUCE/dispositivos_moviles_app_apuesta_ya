@@ -1,6 +1,7 @@
 package com.example.apuestaya.ui.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,25 +22,41 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.boton.setOnClickListener {
-            init()
-        }
+        init()
+
+    }
+    override fun onPause() {
+        super.onPause()
+        println("PAUSANDO APP")
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        println("REANUDANDO APP")
     }
 
     private fun init() {
-        lifecycleScope.launch(Dispatchers.Main) {
-            try {
-                val call = AuthUC().getUsuarioAuntentificacion(binding.usuarioId.text.toString().toInt())
-                //binding.etiqueta.text = call?.name.toString()
-                val activo = call?.status.toString().equals("active")
-                if (activo){
-                    Toast.makeText(this@MainActivity, "Usuario activo", Toast.LENGTH_LONG).show()
-                } else {
-                    Toast.makeText(this@MainActivity, "Usuario inactivo", Toast.LENGTH_LONG).show()
+
+        binding.botonIngresar.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.Main) {
+                try {
+                    val call = AuthUC().getUsuarioAuntentificacion(binding.usuarioId.text.toString().toInt())
+                    //binding.etiqueta.text = call?.name.toString()
+                    val activo = call?.status.toString().equals("active")
+                    if (activo){
+                        val intent = Intent(this@MainActivity,DeportesActivity::class.java)
+
+                        startActivity(intent)
+
+                    } else {
+                        Toast.makeText(this@MainActivity, "Usuario inactivo", Toast.LENGTH_LONG).show()
+                    }
+                } catch (e: Exception) {
+                    throw Exception(e.message)
                 }
-            } catch (e: Exception) {
-                throw Exception(e.message)
             }
         }
+
     }
 }

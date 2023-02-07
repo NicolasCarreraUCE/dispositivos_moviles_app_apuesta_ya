@@ -34,20 +34,6 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreAplicacion"
         app:layout_constraintVertical_bias="0.026" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/cardview_light_background"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaPartidosBasquet"
-        app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/menu_opciones"
-        app:strokeColor="@color/black" />
-
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaPartidosBasquet"
@@ -75,5 +61,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listaPartidosBasquet" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/menu"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <Button
+            android:id="@+id/botonPartidos"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="138dp"
+            android:layout_height="match_parent"
+            android:text="PARTIDOS"
+            app:icon="@drawable/ic_baseline_sports_24"
+            app:iconPadding="4dp"
+            app:strokeColor="#00F3EDED" />
+
+        <Button
+            android:id="@+id/botonPerfil"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="138dp"
+            android:layout_height="match_parent"
+            android:text="PERFIL"
+            app:icon="@drawable/ic_baseline_person_24"
+            app:iconPadding="4dp"
+            app:strokeColor="#00FFFFFF" />
+
+        <Button
+            android:id="@+id/botonSalir"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="138dp"
+            android:layout_height="match_parent"
+            android:text="SALIR"
+            app:icon="@drawable/ic_baseline_exit_to_app_24"
+            app:iconPadding="4dp"
+            app:strokeColor="#00FFFFFF" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

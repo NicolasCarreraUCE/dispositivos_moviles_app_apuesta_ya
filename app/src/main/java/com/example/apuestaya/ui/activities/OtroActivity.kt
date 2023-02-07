@@ -13,5 +13,10 @@ class OtroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityOtroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        init()
+    }
+
+    private fun init(){
+
     }
 }

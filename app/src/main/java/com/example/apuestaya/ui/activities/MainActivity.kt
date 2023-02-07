@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
                     val activo = call?.status.toString().equals("active")
                     if (activo){
                         val intent = Intent(this@MainActivity,DeportesActivity::class.java)
-
                         startActivity(intent)
 
                     } else {

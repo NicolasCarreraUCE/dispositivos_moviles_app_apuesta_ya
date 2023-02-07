@@ -1,13 +1,9 @@
 package com.example.apuestaya.ui.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import com.example.apuestaya.R
+import androidx.appcompat.app.AppCompatActivity
 import com.example.apuestaya.databinding.ActivityDeportesBinding
-import com.example.apuestaya.databinding.ActivityMainBinding
 
 
 class DeportesActivity : AppCompatActivity() {
@@ -19,11 +15,49 @@ class DeportesActivity : AppCompatActivity() {
 
         binding = ActivityDeportesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        var boton = findViewById<Button>(R.id.botonFutbol)
-        boton.setOnClickListener{
-            val int = Intent(this,FutbolActivity::class.java)
-            startActivity(int)
-        }
+        init()
     }
+    private fun init(){
+        binding.botonFutbol.setOnClickListener {
+            val intent = Intent(this,FutbolActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.botonBasquet.setOnClickListener {
+            val intent = Intent(this,BasquetActivity::class.java)
+
+            startActivity(intent)
+        }
+
+       // binding.botonOtro.setOnClickListener {
+       //     val intent = Intent(this,OtroActivity::class.java)
+
+       //    startActivity(intent)
+       // }
+
+        binding.botonPartidos.setOnClickListener {
+            val intent = Intent(this,DeportesActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.botonPerfil.setOnClickListener {
+            val intent = Intent(this,PerfilActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.botonSalir.setOnClickListener {
+
+            val intent = Intent(Intent.ACTION_MAIN)
+            intent.addCategory(Intent.CATEGORY_HOME)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+
+
+        }
+
+    }
+
 }

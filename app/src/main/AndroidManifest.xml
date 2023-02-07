@@ -16,38 +16,36 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".PartidosOtrosActivity"
+            android:name=".ui.activities.PartidosOtrosActivity"
             android:exported="false" />
         <activity
-            android:name=".PartidosBasquetActivity"
+            android:name=".ui.activities.PartidosBasquetActivity"
             android:exported="false" />
         <activity
-            android:name=".PartidosFutbolActivity"
+            android:name=".ui.activities.PartidosFutbolActivity"
             android:exported="false" />
         <activity
-            android:name=".RegistroApuestasActivity"
+            android:name=".ui.activities.RegistroApuestasActivity"
             android:exported="false" />
         <activity
-            android:name=".OtroActivity"
+            android:name=".ui.activities.OtroActivity"
             android:exported="false" />
         <activity
-            android:name=".BasquetActivity"
+            android:name=".ui.activities.BasquetActivity"
             android:exported="false" />
         <activity
-            android:name=".FutbolActivity"
+            android:name=".ui.activities.FutbolActivity"
             android:exported="false" />
         <activity
-            android:name=".ApuestaActivity"
+            android:name=".ui.activities.ApuestaActivity"
             android:exported="false" />
         <activity
-            android:name=".PerfilActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DeportesActivity"
+            android:name=".ui.activities.PerfilActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.DeportesActivity"
             android:exported="false" />
+
         <activity
             android:name=".ui.activities.MainActivity"
             android:exported="true">

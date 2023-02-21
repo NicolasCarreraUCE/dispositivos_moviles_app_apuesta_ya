@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_degradado"
+    tools:context=".ui.activities.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nombreAplicacion"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="ApuestaYa"
+            android:textColor="#8E7755"
+            android:fontFamily="@font/courgette_regular"
+            android:textSize="50sp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/etiquetaId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcespro_bold"
+            android:text="Nuevo usuario:"
+            android:textColor="#162059"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/usuarioId"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:background="@drawable/editredondo"
+            android:hint="Ingrese su id"
+            android:inputType="number"
+
+            />
+
+        <Button
+            android:id="@+id/botonIngresar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="INGRESAR"
+            android:fontFamily="@font/sourcespro_bold"
+            android:textColor="@color/black"
+            app:cornerRadius="15dp"
+            app:strokeColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/etiqueta2Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/sourcespro_bold"
+            android:text="Usuario existente:"
+            android:textColor="#A62828"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/usuario2Id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:background="@drawable/editredondo"
+            android:hint="Ingrese su id"
+            android:inputType="number"
+
+            />
+
+        <Button
+            android:id="@+id/boton2Ingresar"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:text="INGRESAR"
+            android:fontFamily="@font/sourcespro_bold"
+            android:textColor="@color/black"
+            app:cornerRadius="15dp"
+            app:strokeColor="@color/black"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

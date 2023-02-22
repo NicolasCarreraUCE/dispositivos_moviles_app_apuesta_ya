@@ -4,10 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.example.apuestaya.databinding.ActivityMainBinding
 import com.example.apuestaya.user.cases.auth.AuthUC
+import com.example.apuestaya.user.cases.auth.SportAuthUC
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -36,13 +38,13 @@ class MainActivity : AppCompatActivity() {
         println("REANUDANDO APP")
     }
 
+    // https://gorest.co.in/public/v2/users
     private fun init() {
 
         binding.botonIngresar.setOnClickListener {
             lifecycleScope.launch(Dispatchers.Main) {
                 try {
                     val call = AuthUC().getUsuarioAuntentificacion(binding.usuarioId.text.toString().toInt())
-                    //binding.etiqueta.text = call?.name.toString()
                     val activo = call?.status.toString().equals("active")
                     if (activo){
                         val intent = Intent(this@MainActivity,DeportesActivity::class.java)
@@ -52,7 +54,8 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity, "Usuario inactivo", Toast.LENGTH_LONG).show()
                     }
                 } catch (e: Exception) {
-                    throw Exception(e.message)
+                    //throw Exception(e.message)
+                    Toast.makeText(this@MainActivity, "Usuario inexistente", Toast.LENGTH_LONG).show()
                 }
             }
         }

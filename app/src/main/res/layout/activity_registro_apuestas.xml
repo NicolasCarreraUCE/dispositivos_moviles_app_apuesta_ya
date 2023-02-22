@@ -46,18 +46,71 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etiquetaId" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/recyclerListaApuestas"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/sourcespro_bold"
+            android:text="DEPORTE"
+            android:textColor="#9A5742"
+            android:textSize="14sp" />
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:fontFamily="@font/sourcespro_bold"
+            android:text="EQUIPO"
+            android:textColor="#9A5742"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="78dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:fontFamily="@font/sourcespro_bold"
+            android:textColor="#9A5742"
+            android:text="PARTIDO"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:fontFamily="@font/sourcespro_bold"
+            android:textColor="#9A5742"
+            android:text="APUESTA"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:textSize="14sp"
+            android:fontFamily="@font/sourcespro_bold"
+            android:textColor="#9A5742"
+            android:text="PUNTOS"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaApuestas"
+        android:id="@+id/recyclerListaApuestas"
         android:layout_width="match_parent"
         android:layout_height="350dp"
-        android:layout_marginTop="48dp"
-        android:padding="30dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/bordes_constraint"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="1"
+        android:padding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreUsuario"
+        tools:listitem="@layout/activity_resultado_lista" />
 
     <Button
         android:id="@+id/regresarPerfil"
@@ -69,7 +122,7 @@
         app:cornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listaApuestas" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerListaApuestas" />
 
     <LinearLayout
         android:layout_width="match_parent"

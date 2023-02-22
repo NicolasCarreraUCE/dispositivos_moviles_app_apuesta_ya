@@ -13,8 +13,9 @@ class DeportesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDeportesBinding
     private lateinit var dataBaseApuesta: DatabaseReference
-    var user:String=""
     val listaApuesta= mutableListOf<Apuestas>()
+    var user:String=""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +49,7 @@ class DeportesActivity : AppCompatActivity() {
 
 
         // Codigo para consultar todas las apuestas de un usuario
+        /*
         dataBaseApuesta= FirebaseDatabase.getInstance().getReference("Apuestas")
 
 
@@ -77,6 +79,8 @@ class DeportesActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
+
+         */
 
     }
     private fun init(){

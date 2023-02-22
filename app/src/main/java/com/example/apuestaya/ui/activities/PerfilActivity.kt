@@ -7,8 +7,8 @@ import android.widget.Toast
 import com.example.apuestaya.R
 import com.example.apuestaya.databinding.ActivityDeportesBinding
 import com.example.apuestaya.databinding.ActivityPerfilBinding
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.example.apuestaya.model.entities.api.Apuestas
+import com.google.firebase.database.*
 
 class PerfilActivity : AppCompatActivity() {
 
@@ -16,20 +16,28 @@ class PerfilActivity : AppCompatActivity() {
     private lateinit var dataBase: DatabaseReference
     var user:String=""
 
+    var listaApuesta= mutableListOf<Apuestas>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPerfilBinding.inflate(layoutInflater)
         setContentView(binding.root)
         init()
 
-
+        // Obtener usuario
         val usuarioIngresado = intent.extras?.getString(
             "usuario",
         ).toString()
-
         user=usuarioIngresado
+
+        obtenerUsuario()
+
+
+    }
+
+    private fun obtenerUsuario(){
         dataBase= FirebaseDatabase.getInstance().getReference("Users")
-        dataBase.child(usuarioIngresado).get().addOnSuccessListener {
+        dataBase.child(user).get().addOnSuccessListener {
             if(it.exists()){
                 val idPasar=it.child("id").value
                 val nombre=it.child("nombre").value
@@ -45,14 +53,18 @@ class PerfilActivity : AppCompatActivity() {
             }
         }
 
-        System.out.println(usuarioIngresado)
+        System.out.println(user)
     }
+
+
+
 
     private fun init(){
 
         binding.irApuestas.setOnClickListener {
             val intent = Intent(this,RegistroApuestasActivity::class.java)
             intent.putExtra("usuario",user)
+
             startActivity(intent)
         }
 

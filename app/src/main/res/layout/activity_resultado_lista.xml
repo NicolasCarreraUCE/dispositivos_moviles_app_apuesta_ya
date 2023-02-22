@@ -2,47 +2,53 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   >
+
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="50dp"
+        android:id="@+id/idDeporte"
+        android:layout_width="80dp"
         android:layout_height="80dp"
+        android:gravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Aqui va el id" />
+        tools:text="deporte" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Aqui va el tipo de partido" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="100dp"
-        android:layout_height="80dp"
-
-        app:layout_constraintStart_toEndOf="@+id/textView9"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Aqui van los equipos" />
-
-    <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/idEquipo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/idDeporte"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Aqui va la seleccion" />
+        tools:text="equipos" />
 
     <TextView
+        android:id="@+id/idEstadoPartido"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/idEquipo"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Aqui va el resultado" />
+        tools:text="estadoPartido" />
+
+    <TextView
+        android:id="@+id/idEstadoApuesta"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@+id/idEstadoPartido"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="EstadoApuesta" />
+    <TextView
+        android:id="@+id/idPuntos"
+        android:layout_width="57dp"
+        android:gravity="center"
+        android:layout_height="80dp"
+        app:layout_constraintStart_toEndOf="@+id/idEstadoApuesta"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="puntos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

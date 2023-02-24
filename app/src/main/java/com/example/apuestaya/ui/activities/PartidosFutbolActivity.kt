@@ -21,7 +21,8 @@ class PartidosFutbolActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityPartidosFutbolBinding
     private lateinit var recyclerView: RecyclerView
-    var user:String=""
+    var user : String=""
+    private var idLiga : Int = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPartidosFutbolBinding.inflate(layoutInflater)
@@ -31,7 +32,9 @@ class PartidosFutbolActivity : AppCompatActivity() {
             "usuario",
         ).toString()
 
-        user=saludo
+        user = saludo
+
+        idLiga = intent.extras?.getInt("ID_LIGA")!!.toInt()
 
         lifecycleScope.launch(Dispatchers.Main){
             initRecyclerView()
@@ -42,7 +45,7 @@ class PartidosFutbolActivity : AppCompatActivity() {
         recyclerView = binding.listaPartidosFutbol
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val listaDePartidos: List<Response>? = SportAuthUC().getEnfrentamientos()?.response
+        val listaDePartidos: List<Response>? = SportAuthUC().getEnfrentamientos(idLiga, 2022, "NS")?.response
 
         recyclerView.adapter = PartidosAdapter(listaDePartidos!!)
     }

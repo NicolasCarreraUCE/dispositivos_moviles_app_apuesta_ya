@@ -33,11 +33,13 @@ class FutbolActivity : AppCompatActivity() {
         binding.botonLigaEspaniola.setOnClickListener {
             val intent = Intent(this,PartidosFutbolActivity::class.java)
             intent.putExtra("usuario",user)
+            intent.putExtra("ID_LIGA", 140)
             startActivity(intent)
         }
         binding.botonLigaInglesa.setOnClickListener {
             val intent = Intent(this,PartidosFutbolActivity::class.java)
             intent.putExtra("usuario",user)
+            intent.putExtra("ID_LIGA", 39)
             startActivity(intent)
         }
         binding.botonPartidos.setOnClickListener {

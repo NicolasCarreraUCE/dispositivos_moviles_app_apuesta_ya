@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.example.apuestaya.R
-import com.example.apuestaya.databinding.ActivityDeportesBinding
 import com.example.apuestaya.databinding.ActivityPerfilBinding
-import com.example.apuestaya.model.entities.api.Apuestas
+import com.example.apuestaya.model.entities.api.user.Apuestas
 import com.google.firebase.database.*
 
 class PerfilActivity : AppCompatActivity() {

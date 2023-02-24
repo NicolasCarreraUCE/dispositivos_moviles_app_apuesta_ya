@@ -8,17 +8,13 @@ import android.os.Looper
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.apuestaya.R
-import com.example.apuestaya.databinding.ActivityDeportesBinding
-import com.example.apuestaya.databinding.ActivityPerfilBinding
 import com.example.apuestaya.databinding.ActivityRegistroApuestasBinding
-import com.example.apuestaya.model.adapter.ApuestasAdapter
-import com.example.apuestaya.model.entities.api.Apuestas
+import com.example.apuestaya.model.adapters.ApuestasAdapter
+import com.example.apuestaya.model.entities.api.user.Apuestas
 import com.google.firebase.database.*
 import kotlinx.coroutines.launch
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class RegistroApuestasActivity : AppCompatActivity() {
 
@@ -82,7 +78,7 @@ class RegistroApuestasActivity : AppCompatActivity() {
                         val estadoApuestasss=i.child("estadoApuesta").value.toString()
                         val puntitos=i.child("puntos").value.toString()
 
-                        val apuestad=Apuestas(idApuesta,deporte,equipo,estadoParitod,estadoApuestasss,puntitos.toFloat())
+                        val apuestad= Apuestas(idApuesta,deporte,equipo,estadoParitod,estadoApuestasss,puntitos.toFloat())
                         listaApuesta.add(apuestad)
 
                         System.out.println(i)
@@ -91,7 +87,7 @@ class RegistroApuestasActivity : AppCompatActivity() {
                     for(apu in listaApuesta){
 
                         System.out.println("pruebass")
-                        var apu1:Apuestas= Apuestas(apu.id,apu.deporte,apu.equipo,apu.estadoPartido,apu.estadoApuesta,apu.puntos)
+                        var apu1: Apuestas = Apuestas(apu.id,apu.deporte,apu.equipo,apu.estadoPartido,apu.estadoApuesta,apu.puntos)
 
                         System.out.println(apu1)
                         listaApuestas2.add(apu1)

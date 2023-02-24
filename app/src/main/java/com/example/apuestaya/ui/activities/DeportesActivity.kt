@@ -2,10 +2,9 @@ package com.example.apuestaya.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apuestaya.databinding.ActivityDeportesBinding
-import com.example.apuestaya.model.entities.api.Apuestas
+import com.example.apuestaya.model.entities.api.user.Apuestas
 import com.google.firebase.database.*
 
 

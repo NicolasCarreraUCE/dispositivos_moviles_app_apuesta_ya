@@ -1,8 +1,7 @@
 package com.example.apuestaya.user.cases.auth
 
-import android.util.Log
 import com.example.apuestaya.model.endpoints.UserEndPoint
-import com.example.apuestaya.model.entities.api.Usuarios
+import com.example.apuestaya.model.entities.api.user.Usuarios
 import com.example.apuestaya.model.repositories.APIRepository
 
 class AuthUC {

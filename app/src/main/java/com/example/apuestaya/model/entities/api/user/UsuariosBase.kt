@@ -1,4 +1,4 @@
-package com.example.apuestaya.model.entities.api
+package com.example.apuestaya.model.entities.api.user
 
 data class UsuariosBase(
     val id:Int,

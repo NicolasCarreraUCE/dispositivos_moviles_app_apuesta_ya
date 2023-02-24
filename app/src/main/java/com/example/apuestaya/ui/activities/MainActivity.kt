@@ -2,12 +2,14 @@ package com.example.apuestaya.ui.activities
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.apuestaya.user.cases.auth.SportAuthUC
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.example.apuestaya.databinding.ActivityMainBinding
-import com.example.apuestaya.model.entities.api.UsuariosBase
+import com.example.apuestaya.model.entities.api.user.UsuariosBase
 import com.example.apuestaya.user.cases.auth.AuthUC
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         println("REANUDANDO APP")
     }
 
+    // https://gorest.co.in/public/v2/users
     private fun init() {
 
         binding.botonIngresar.setOnClickListener {

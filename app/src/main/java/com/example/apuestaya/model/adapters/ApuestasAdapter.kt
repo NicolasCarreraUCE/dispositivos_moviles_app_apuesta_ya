@@ -1,18 +1,13 @@
-package com.example.apuestaya.model.adapter
+package com.example.apuestaya.model.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apuestaya.R
-import com.example.apuestaya.databinding.ActivityResultadoListaBinding
-import com.example.apuestaya.model.entities.api.Apuestas
-import kotlinx.coroutines.launch
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.Dispatchers
+import com.example.apuestaya.model.entities.api.user.Apuestas
 
 class ApuestasAdapter(var context:Context, var dataList:MutableList<Apuestas>) : RecyclerView.Adapter<ApuestasAdapter.ViewHolder>() {
 

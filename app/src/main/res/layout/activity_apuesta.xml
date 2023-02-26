@@ -34,13 +34,13 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreAplicacion"
         app:layout_constraintVertical_bias="0.026" />
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/menuPerfil"
         android:layout_width="match_parent"
         android:layout_height="370dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/bordes_constraint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etiquetaId">
@@ -155,33 +155,21 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/puntosUsuario"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
+            android:id="@+id/hora"
+            android:layout_width="105dp"
+            android:layout_height="25dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="56dp"
             android:fontFamily="@font/itim"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="15sp"
             app:layout_constraintEnd_toStartOf="@+id/equipo2"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/equipo1"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Hora" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <Button
-        android:id="@+id/regresarPartido"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@color/dorado1"
-        android:text="REGRESAR"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menuPerfil" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -225,6 +213,37 @@
             app:strokeColor="#00FFFFFF" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/credito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="Credito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etiquetaId" />
+
+    <TextView
+        android:id="@+id/Cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="Cantidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/credito" />
+
+    <EditText
+        android:id="@+id/obtenerCantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toEndOf="@+id/Cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/etiquetaId" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

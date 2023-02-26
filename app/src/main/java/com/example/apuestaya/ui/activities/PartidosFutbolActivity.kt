@@ -47,7 +47,7 @@ class PartidosFutbolActivity : AppCompatActivity() {
 
         val listaDePartidos: List<Response>? = SportAuthUC().getEnfrentamientos(idLiga, 2022, "NS")?.response
 
-        recyclerView.adapter = PartidosAdapter(listaDePartidos!!)
+        recyclerView.adapter = PartidosAdapter(user, listaDePartidos!!, this)
     }
 
     private fun init(){

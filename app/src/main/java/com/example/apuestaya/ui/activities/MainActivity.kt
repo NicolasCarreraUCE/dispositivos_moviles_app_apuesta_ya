@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity, "Usuario inactivo", Toast.LENGTH_LONG).show()
                     }
                 } catch (e: Exception) {
-                    throw Exception(e.message)
+                    Toast.makeText(this@MainActivity, "Usuario no encontrado", Toast.LENGTH_LONG).show()
                 }
             }
         }

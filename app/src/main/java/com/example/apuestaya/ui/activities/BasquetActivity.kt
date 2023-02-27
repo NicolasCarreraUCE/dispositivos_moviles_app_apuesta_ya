@@ -32,6 +32,7 @@ class BasquetActivity : AppCompatActivity() {
         binding.botonNba.setOnClickListener {
             val intent = Intent(this,PartidosBasquetActivity::class.java)
             intent.putExtra("usuario",user)
+            intent.putExtra("ID_LIGA", 12)
             startActivity(intent)
         }
         binding.botonPartidos.setOnClickListener {

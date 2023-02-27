@@ -20,7 +20,7 @@ class SportAuthUC {
         }
     }
 
-    suspend fun getjuegosBasketball(league: Int, season: String): Games? {
+    suspend fun getJuegosBasketball(league: Int, season: String): Games? {
         return try {
             val service = SportAPIRepository().buildBasketballService(SportEndPoint::class.java)
             val response = service.juegosBasketball(league, season)
